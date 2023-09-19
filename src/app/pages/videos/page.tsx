@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import styles from "./videos.module.scss";
-import data from "@/app/data";
+import { data } from "./data";
 
 export const metadata: Metadata = {
   title: "Vídeos - Jessica Crusco",
 };
 
 export default function VideosPage() {
-  const videos = data();
+  const videos = data;
 
   console.log("manifest", videos);
 
@@ -19,7 +19,13 @@ export default function VideosPage() {
         <Link href={"/"}>
           <button>Voltar</button>
         </Link>
-        <h2>{videos.name}</h2>
+
+        {videos.map((value, index) => (
+          <>
+            <h2 key={index}>{value.name}</h2>
+            <h3>{value.bio}</h3>
+          </>
+        ))}
       </div>
     </>
   );
