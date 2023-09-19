@@ -1,5 +1,4 @@
 import Link from "next/link";
-import VideosPage from "./pages/videos/page";
 
 export function Home() {
   return (

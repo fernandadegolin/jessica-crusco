@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import styles from "./videos.module.scss";
+
+export const metadata: Metadata = {
+  title: `Vídeos - Jessica Crusco`,
+};
 
 export default function VideosLayout({
   children,
