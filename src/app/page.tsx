@@ -10,6 +10,9 @@ export function Home() {
       <Link href={"/pages/videos"}>
         <button>Vídeos</button>
       </Link>
+      <Link href={"/pages/galeria"}>
+        <button>Galeria</button>
+      </Link>
     </>
   );
 }

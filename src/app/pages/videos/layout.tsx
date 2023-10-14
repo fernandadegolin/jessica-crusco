@@ -10,5 +10,13 @@ export default function VideosLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <body className={styles.layout}>{children}</body>;
+  return (
+    <html lang="en">
+      <body>
+        <h1>Página de Vídeos</h1>
+        <hr />
+        {children}
+      </body>
+    </html>
+  );
 }
